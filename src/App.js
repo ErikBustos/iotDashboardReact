@@ -1,7 +1,13 @@
 import {useState} from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Main from "./components/main/Main";
 import Navbar from "./components/navbar/Navbar"
 import Sidebar from "./components/sidebar/Sidebar";
+import SignUp from "./components/signUp/SignUp";
+import SignIn from "./components/signUp/SignIn";
+import {Account} from './components/signUp/Accounts';
+import Status from './components/signUp/Status';
+
 
 const App= () => {
 
@@ -15,16 +21,27 @@ const App= () => {
     setSidebarOpen(false);
   }
 
-  let user = {
+/*   let user = {
     email:"erikbus2007@hotmail.com",
     name:"Erik Bustos"
-  }
+  } */
 
   return (
     <div className="container">
+      <Account>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/login">
+            <SignIn/>
+          </Route>
+        </Switch>
+      </BrowserRouter>
       <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar}/>
-      <Main user={user} />
+      <Main />
       <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
+        <Status/>
+        <SignUp/>
+      </Account>
     </div>
  );
 }

@@ -11,7 +11,7 @@ const Main = ({user}) => {
         <div className="main__title">
           <img src={hello} alt="hello" />
           <div className="main__greeting">
-            <h1>Hello {user.name}</h1>
+            <h1>Hello </h1>
             <p>Welcome to your farms dashboard</p>
           </div>
         </div>
