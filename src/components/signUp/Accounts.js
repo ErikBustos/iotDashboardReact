@@ -2,6 +2,7 @@ import { createContext } from 'react';
 import { CognitoUser, AuthenticationDetails } from 'amazon-cognito-identity-js';
 import Pool from '../../auth/UserPool';
 
+
 const AccountContext = createContext();
 
     const Account = props => {
@@ -29,6 +30,8 @@ const AccountContext = createContext();
       user.authenticateUser(authDetails, {
         onSuccess: data => {
           console.log('onSuccess:', data);
+          localStorage.setItem('userName', data.idToken.payload.name);
+          localStorage.setItem('userEmail', data.idToken.payload.email);
           resolve(data);
         },
 
@@ -43,13 +46,17 @@ const AccountContext = createContext();
         }
       });
     });
-  
+
   const logout = () => {
     const user = Pool.getCurrentUser();
     if (user) {
+      console.log('Logging out')
+      localStorage.removeItem('userName');
+      localStorage.removeItem('email');
       user.signOut();
     }
   }
+
 
   return (
     <AccountContext.Provider value={{

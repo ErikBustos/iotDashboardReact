@@ -2,7 +2,7 @@ import "./Main.css";
 import hello from "../../assets/hello.svg";
 import Chart from "../charts/ChartXY";
 
-const Main = ({user}) => {
+const Main = () => {
   return (
     <main>
       <div className="main__container">
@@ -107,6 +107,17 @@ const Main = ({user}) => {
               </div>
             </div>
           </div>
+          <div className="charts__left">
+            <div className="charts__left__title">
+              <div>
+                <h1>Temperature</h1>
+                <p>Cupertino, California, USA</p>
+              </div>
+              <i className="fa fa-usd" aria-hidden="true"></i>
+            </div>
+            <Chart />
+          </div>
+
         </div>
         {/* <!-- CHARTS ENDS HERE --> */}
       </div>
