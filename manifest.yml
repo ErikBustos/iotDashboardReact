@@ -1,0 +1,10 @@
+applications:
+  - name: IoTDashboardApp
+    buildpacks:
+      - sdk-for-nodejs
+    path: .
+    command: npm run serve
+    instances: 1
+    memory: 128M
+    env:
+      NPM_CONFIG_PRODUCTION: false

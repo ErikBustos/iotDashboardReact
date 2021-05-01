@@ -12,6 +12,7 @@ main {
   .main__title {
     display: flex;
     align-items: center;
+    padding-left: inherit;
   }
   
   .main__title > img {
@@ -130,13 +131,14 @@ main {
   
   .charts__right__title > i {
     color: #ffffff;
-    font-size: 20px;
+    font-size: 18px;
     background: #39447a;
     border-radius: 200px 0px 200px 200px;
     -moz-border-radius: 200px 0px 200px 200px;
     -webkit-border-radius: 200px 0px 200px 200px;
     border: 0px solid #000000;
     padding: 15px;
+    font: optional;
   }
   
   .charts__right__cards {

@@ -21,7 +21,7 @@ const SignUp = () => {
         let attributeList= []
         attributeList.push(namedata)
         UserPool.signUp(email, password, attributeList, null, (err, data) => {
-          if (err) console.error(err);
+          if (err) window.alert(err.message)
           console.log(data);
         });
       };

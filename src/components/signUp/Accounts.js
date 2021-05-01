@@ -52,7 +52,7 @@ const AccountContext = createContext();
     if (user) {
       console.log('Logging out')
       localStorage.removeItem('userName');
-      localStorage.removeItem('email');
+      localStorage.removeItem('userEmail');
       user.signOut();
     }
   }

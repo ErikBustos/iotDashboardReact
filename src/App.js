@@ -19,7 +19,10 @@ const App= () => {
             <SignUp/>
           </Route>
           <Route path="/dashboard">
-          <Dashboard/>
+            <Dashboard/>
+          </Route>
+          <Route path="/">
+            <Dashboard/>
           </Route>
         </Switch>
       </BrowserRouter>

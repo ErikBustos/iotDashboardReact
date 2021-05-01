@@ -52,6 +52,10 @@
   padding: 7px;
 }
 
+.calendarWidth {
+  width: auto;
+}
+
 @media only screen and (max-width: 978px) {
   .nav_icon {
     display: inline;
@@ -62,4 +66,8 @@
   .navbar__left {
     display: none;
   }
+}
+
+* {
+	 max-inline-size: 100vmax; 
 }

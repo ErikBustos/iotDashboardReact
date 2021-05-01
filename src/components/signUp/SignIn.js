@@ -23,6 +23,7 @@ const SignIn = () => {
             routeChange();
           })
           .catch(err =>{
+            window.alert(err.message)
             console.error('Failed to login ', err);
           })
       };
